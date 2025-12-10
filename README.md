@@ -4,7 +4,7 @@ Random forest model
 1. Data Preparation
   Loads and renames variables from input datasets (e.g., RF_348_TXT.txt for wards).
   Creates spatial clusters using KMeans (configurable n_clusters) based on longitude/latitude for holdout and stratified cross-validation.
-  Selects base features (e.g., DomesticFuelUse, PopDensity) plus target-specific NDVI; handles missing columns gracefully.
+  Selects base features (e.g., DomesticFuelUse, PopDensity) plus target-specific NDVI; etc).
 2. Modeling Approach
   Trains Random Forest Regressors separately for each season (winter, spring, summer, autumn) and annual targets (PM_2km, PM_6km).
   Creates 90/10 spatial holdout via whole-cluster selection (fallback to random split if no coords).
